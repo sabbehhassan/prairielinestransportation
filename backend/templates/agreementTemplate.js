@@ -44,7 +44,7 @@ module.exports = function agreementTemplate(formData) {
         left: 20%;
         width: 500px;
         height: 500px;
-        background: url("http://localhost:5000/logo.png") no-repeat center;
+        background: url("https://loblawtransportus.vercel.app//logo.png") no-repeat center;
         background-size: contain;
         opacity: 0.03;
         z-index: -1;
@@ -238,7 +238,7 @@ module.exports = function agreementTemplate(formData) {
   </div>
 
   <div class="logo-section">
-    <img src="http://localhost:5000/logo.png" class="logo"/>
+    <img src="https://loblawtransportus.vercel.app//logo.png" class="logo"/>
 
     <div class="company-address">
       320 N MERIDIAN ST. 3RD FLOOR SUITE INDIANAPOLIS, IN 46204
@@ -431,7 +431,7 @@ module.exports = function agreementTemplate(formData) {
   <div class="page-break"></div>
 
   <div class="certificate">
-    <img src="http://localhost:5000/certificate.png"/>
+    <img src="https://loblawtransportus.vercel.app//certificate.png"/>
   </div>
 
   </body>
