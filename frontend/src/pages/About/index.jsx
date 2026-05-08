@@ -22,7 +22,7 @@ const About = () => {
       {/* ================= HERO ================= */}
       <div className="relative h-[520px] md:h-[700px]">
 
-        <img src={heroBg} className="w-full h-full object-cover" />
+        <img src={heroBg} className="w-full h-full object-cover" loading="lazy" />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
 

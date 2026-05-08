@@ -10,6 +10,7 @@ const HeroSection = ({ setOpenAgreement }) => {
           src={heroBg}
           alt="Logistics Hero"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
