@@ -89,12 +89,12 @@ const Navbar = () => {
 
               {/* Desktop Button */}
               <div className="hidden lg:block">
-                <Link
-                  to="/carrier-agreement"
+                <button
+                  onClick={() => setOpenAgreement(true)}
                   className="bg-gradient-to-r from-[#0B7BEA] to-[#0863c0] hover:scale-105 text-white px-7 py-3 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Carrier Setup | Agreement
-                </Link>
+                </button>
               </div>
 
               {/* Mobile Toggle */}
@@ -138,13 +138,15 @@ const Navbar = () => {
                   );
                 })}
 
-                <Link
-                  to="/carrier-agreement"
-                  onClick={() => setMenuOpen(false)}
-                  className="w-full bg-gradient-to-r from-[#0B7BEA] to-[#0863c0] text-white py-3 rounded-2xl font-semibold shadow-lg mt-4 text-center block"
+                <button
+                  onClick={() => {
+                    setOpenAgreement(true);
+                    setMenuOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-[#0B7BEA] to-[#0863c0] text-white py-3 rounded-2xl font-semibold shadow-lg mt-4"
                 >
                   Carrier Setup | Agreement
-                </Link>
+                </button>
 
               </div>
             </div>
