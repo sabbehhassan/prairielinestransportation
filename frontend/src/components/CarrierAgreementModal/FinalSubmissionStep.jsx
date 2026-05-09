@@ -60,7 +60,7 @@ export default function FinalSubmissionStep({
 
     try {
       const response = await fetch(
-        "https://loblawtransportus.vercel.app//api/submit-agreement",
+        `${import.meta.env.VITE_API_URL}/api/submit-agreement`,
         {
           method: "POST",
           headers: {
