@@ -64,6 +64,8 @@ router.post("/submit-agreement", async (req, res) => {
     res.status(500).json({
       success: false,
       message: "Server Error",
+      error: error.message, // Add this line
+      stack: error.stack,   // And this line (optional, for debugging)
     });
   }
 });
