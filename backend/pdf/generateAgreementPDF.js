@@ -1,4 +1,4 @@
-const chromium = require("chrome-aws-lambda");
+const chromium = require("@sparticuz/chromium");
 const puppeteer = require("puppeteer-core");
 const fs = require("fs");
 const path = require("path");
@@ -7,8 +7,7 @@ const agreementTemplate = require("../templates/agreementTemplate");
 async function generateAgreementPDF(formData) {
   const browser = await puppeteer.launch({
     args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
-    executablePath: await chromium.executablePath,
+    executablePath: await chromium.executablePath(),
     headless: chromium.headless,
   });
 
@@ -17,9 +16,10 @@ async function generateAgreementPDF(formData) {
   await page.setContent(html, { waitUntil: "networkidle0" });
 
   // In serverless, write to /tmp
-  const pdfDir = process.env.NODE_ENV === 'production'
-    ? "/tmp"
-    : path.join(__dirname, "../generated");
+  const pdfDir =
+    process.env.NODE_ENV === "production"
+      ? "/tmp"
+      : path.join(__dirname, "../generated");
 
   if (!fs.existsSync(pdfDir)) {
     fs.mkdirSync(pdfDir);
