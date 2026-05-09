@@ -16,7 +16,7 @@
     "express": "^5.2.1",
     "nodemailer": "^8.0.7",
     "pdfkit": "^0.18.0",
-    "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^24.42.0"
+     "@sparticuz/chromium": "^148.0.0",
+  "puppeteer-core": "^24.42.0"
   }
 }
