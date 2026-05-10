@@ -298,7 +298,7 @@ export default function FinalSubmissionStep({
               <li>Carrier must check-in on time at shipper/receiver</li>
               <li>Submit documents within 24 hours</li>
               <li>Notify broker after 60 minutes delay</li>
-              <li>Provide signed BOL and confirmation after contract setup completed</li>
+              <li>Provide signed BOL and Rate confirmation after contract setup completed</li>
             </ul>
           </div>
 
