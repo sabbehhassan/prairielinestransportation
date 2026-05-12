@@ -31,7 +31,7 @@ const reviews = [
       "Government contract logistics were handled securely and professionally. Great communication throughout.",
   },
   {
-    name: "David Clark",
+    name: "Gysin David",
     role: "Business Owner",
     review:
       "Excellent customer support and dependable shipping services. We use them regularly for freight.",
