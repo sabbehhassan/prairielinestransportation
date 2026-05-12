@@ -14,9 +14,11 @@ router.post("/", async (req, res) => {
       });
     }
 
-    // Transporter
+    // Hostinger SMTP Transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
 
       auth: {
         user: process.env.EMAIL_USER,
@@ -26,7 +28,7 @@ router.post("/", async (req, res) => {
 
     // Mail Template
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"Prairie Lines Website" <${process.env.EMAIL_USER}>`,
 
       to: process.env.EMAIL_USER,
 
@@ -35,46 +37,46 @@ router.post("/", async (req, res) => {
       subject: `New Contact Form Message From ${name}`,
 
       html: `
-    <div style="font-family: Arial, sans-serif; padding:20px;">
-      
-      <h2 style="color:#0B7BEA;">
-        New Contact Form Submission
-      </h2>
+        <div style="font-family: Arial, sans-serif; padding:20px;">
+          
+          <h2 style="color:#0B7BEA;">
+            New Contact Form Submission
+          </h2>
 
-      <table style="width:100%; border-collapse: collapse;">
+          <table style="width:100%; border-collapse: collapse;">
 
-        <tr>
-          <td style="padding:10px; font-weight:bold;">Name:</td>
-          <td style="padding:10px;">${name}</td>
-        </tr>
+            <tr>
+              <td style="padding:10px; font-weight:bold;">Name:</td>
+              <td style="padding:10px;">${name}</td>
+            </tr>
 
-        <tr>
-          <td style="padding:10px; font-weight:bold;">Email:</td>
-          <td style="padding:10px;">${email}</td>
-        </tr>
+            <tr>
+              <td style="padding:10px; font-weight:bold;">Email:</td>
+              <td style="padding:10px;">${email}</td>
+            </tr>
 
-        <tr>
-          <td style="padding:10px; font-weight:bold;">Phone:</td>
-          <td style="padding:10px;">${phone}</td>
-        </tr>
+            <tr>
+              <td style="padding:10px; font-weight:bold;">Phone:</td>
+              <td style="padding:10px;">${phone}</td>
+            </tr>
 
-      </table>
+          </table>
 
-      <div style="
-        margin-top:20px;
-        padding:20px;
-        background:#f3f4f6;
-        border-radius:10px;
-      ">
-        <h3>Message</h3>
+          <div style="
+            margin-top:20px;
+            padding:20px;
+            background:#f3f4f6;
+            border-radius:10px;
+          ">
+            <h3>Message</h3>
 
-        <p style="line-height:1.8;">
-          ${message}
-        </p>
-      </div>
+            <p style="line-height:1.8;">
+              ${message}
+            </p>
+          </div>
 
-    </div>
-  `,
+        </div>
+      `,
     };
 
     // Send Mail
@@ -84,7 +86,9 @@ router.post("/", async (req, res) => {
       success: true,
       message: "Message sent successfully",
     });
+
   } catch (error) {
+
     console.log(error);
 
     return res.status(500).json({
