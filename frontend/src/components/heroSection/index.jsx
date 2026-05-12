@@ -15,7 +15,7 @@ const HeroSection = ({ setOpenAgreement }) => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0F3D2E]/75"></div>
+      <div className="absolute inset-0"></div>
 
       {/* Extra Gradient Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F3D2E]/90 via-[#0F3D2E]/60 to-transparent"></div>
