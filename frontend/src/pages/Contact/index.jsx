@@ -65,9 +65,6 @@ const Contact = () => {
           className="w-full h-full object-cover"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0F3D2E]/75"></div>
-
         <div className="absolute inset-0 flex items-center justify-center text-center px-6">
 
           <div>
