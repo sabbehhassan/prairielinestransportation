@@ -23,7 +23,7 @@ export default function TruckingAgreement({
         <div className="max-h-[88vh] overflow-y-auto">
 
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#02053D] to-[#0A1B7A] px-6 sm:px-10 py-8 text-white relative">
+          <div className="bg-gradient-to-r from-[#2E6B3D] to-[#2E6B3D] px-6 sm:px-10 py-8 text-white relative">
 
             <button
               onClick={() => setStep(1)}
@@ -32,7 +32,7 @@ export default function TruckingAgreement({
               ← Back
             </button>
 
-            <div className=" flex items-center bg-gradient-to-r from-[#2E6B3D] via-[#D4A017] to-[#2E6B3D]  gap-3 justify-center mb-3">
+            <div className=" flex items-center gap-3 justify-center mb-3">
               <div className="bg-white/10 p-3 rounded-xl">
                 <Truck size={28} />
               </div>
