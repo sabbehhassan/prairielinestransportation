@@ -4,63 +4,101 @@ export default function DispatchStep({
   selectedDispatch,
   setSelectedDispatch,
 }) {
+
   const [error, setError] = useState("");
 
   const dispatchCompanies = [
+    "3D Dispatch",
     "GO Lane Dispatch",
     "Logity Dispatch",
     "AFT Dispatch",
     "Solace Dispatch",
   ];
 
-  
-
   return (
     <div className="mt-8">
 
+      {/* Badge */}
+      <span className="inline-block bg-[#2E6B3D]/10 text-[#2E6B3D] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide border border-[#2E6B3D]/10 mb-5">
+        Agreement Process
+      </span>
+
       {/* Title */}
-      <h2 className="text-xl sm:text-2xl font-bold text-[#02053D] mb-3">
+      <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3D2E] mb-4 leading-tight">
         Step 1: Dispatch Company
       </h2>
 
       {/* Description */}
-      <p className="text-gray-500 text-sm sm:text-base mb-5 leading-relaxed">
-        Select your preferred dispatch company from the list below.
+      <p className="text-[#5d6d63] text-sm sm:text-base mb-8 leading-8 max-w-2xl">
+        Select your preferred dispatch company from the list below
+        to continue your trucking agreement setup process.
       </p>
 
-      {/* Dropdown */}
-      <div>
-        <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
+      {/* Selection Card */}
+      <div className="relative bg-white border border-[#D4A017]/10 rounded-[28px] p-6 shadow-lg overflow-hidden">
+
+        {/* Glow */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#2E6B3D]/10 rounded-full blur-3xl"></div>
+
+        {/* Label */}
+        <label className="relative block text-sm sm:text-base font-semibold text-[#0F3D2E] mb-3">
           Dispatch Company Name *
         </label>
 
-        <select
-          value={selectedDispatch}
-          onChange={(e) => {
-            setSelectedDispatch(e.target.value);
-            setError("");
-          }}
-          className={`w-full border rounded-xl px-4 py-3 text-sm sm:text-base bg-white focus:outline-none focus:ring-2 transition ${
-            error
-              ? "border-red-400 focus:ring-red-400"
-              : "border-gray-300 focus:ring-blue-500"
-          }`}
-        >
-          <option value="">Select Dispatch Company</option>
+        {/* Select */}
+        <div className="relative">
 
-          {dispatchCompanies.map((company, index) => (
-            <option key={index} value={company}>
-              {company}
+          <select
+            value={selectedDispatch}
+            onChange={(e) => {
+              setSelectedDispatch(e.target.value);
+              setError("");
+            }}
+            className={`
+              relative w-full rounded-2xl px-5 py-4 text-sm sm:text-base
+              bg-[#fafbf9] outline-none transition-all duration-300
+              appearance-none cursor-pointer
+              shadow-sm
+
+              ${
+                error
+                  ? "border border-red-400 focus:ring-2 focus:ring-red-300"
+                  : `
+                    border border-[#dce5df]
+                    hover:border-[#2E6B3D]
+                    focus:border-[#2E6B3D]
+                    focus:ring-4 focus:ring-[#2E6B3D]/10
+                  `
+              }
+            `}
+          >
+
+            <option value="">
+              Select Dispatch Company
             </option>
-          ))}
-        </select>
+
+            {dispatchCompanies.map((company, index) => (
+              <option key={index} value={company}>
+                {company}
+              </option>
+            ))}
+
+          </select>
+
+          {/* Custom Arrow */}
+          <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-[#2E6B3D]">
+            ▼
+          </div>
+
+        </div>
 
         {/* Error */}
         {error && (
-          <p className="text-red-500 text-sm mt-2">
+          <p className="text-red-500 text-sm mt-3">
             {error}
           </p>
         )}
+
       </div>
 
     </div>
