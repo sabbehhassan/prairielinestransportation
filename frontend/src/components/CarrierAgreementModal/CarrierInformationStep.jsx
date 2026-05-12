@@ -251,7 +251,7 @@ export default function CarrierInformationStep({
               >
                 <option value="">Select Carrier Type</option>
                 <option value="new">New Carrier</option>
-                <option value="old">Old Carrier</option>
+                <option value="old"> 2 Year's Old</option>
               </select>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function CarrierInformationStep({
 
               <div className="space-y-4">
                 {services.map((service, index) => {
-                  const [serviceName, fee] = service.split(" - $");
+                  const [serviceName] = service.split(" - $");
                   let displayText = service;
                   if (agreementData.carrierType === "old") {
                     if (serviceName.trim() === "Dedicated Lane Setup") {
