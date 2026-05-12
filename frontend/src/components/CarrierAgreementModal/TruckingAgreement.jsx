@@ -32,7 +32,7 @@ export default function TruckingAgreement({
               ← Back
             </button>
 
-            <div className="flex items-center gap-3 justify-center mb-3">
+            <div className=" flex items-center bg-gradient-to-r from-[#2E6B3D] via-[#D4A017] to-[#2E6B3D]  gap-3 justify-center mb-3">
               <div className="bg-white/10 p-3 rounded-xl">
                 <Truck size={28} />
               </div>

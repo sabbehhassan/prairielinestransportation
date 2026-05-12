@@ -19,7 +19,7 @@ export default function DispatchStep({
     <div className="mt-8">
 
       {/* Badge */}
-      <span className="inline-block bg-[#0F3D2E]/10 text-[#0F3D2E] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide border border-[#0F3D2E]/10 mb-5">
+      <span className="inline-block bg-[#2E6B3D]/10 text-[#2E6B3D] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide border border-[#2E6B3D]/10 mb-5">
         Agreement Process
       </span>
 
