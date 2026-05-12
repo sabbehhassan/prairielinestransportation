@@ -100,9 +100,9 @@ const Contact = () => {
                   title: "Email",
                   value: (
                     <p>
-                      info@loblawtransportus.com
+                      info@praireilinestransportation.com
                       <br />
-                      Alfred@loblawtransportus.com
+                      gaysin@praireilinestransportation.com
                     </p>
                   ),
                 },
@@ -110,7 +110,7 @@ const Contact = () => {
                   icon: <FaMapMarkerAlt />,
                   title: "Address",
                   value:
-                    "320 N MERIDIAN ST. 3RD FLOOR SUITE INDIANAPOLIS, IN 46204",
+                    "54 1/2 street south fargo, ND  58103",
                 },
                 {
                   icon: <FaClock />,

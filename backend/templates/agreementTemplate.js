@@ -239,15 +239,15 @@ module.exports = function agreementTemplate(formData) {
     <div class="title">BROKER / CARRIER AGREEMENT</div>
 
     <div class="header-email">
-      info@loblawtransportus.com
+      info@praireilinestransportation.com
       </div>
   </div>
 
   <div class="logo-section">
-    <img src="https://loblawtransportus.vercel.app//logo.png" class="logo"/>
+    <img src="https://www.praireilinestransportation.com/logo.png" class="logo"/>
 
     <div class="company-address">
-      320 N MERIDIAN ST. 3RD FLOOR SUITE INDIANAPOLIS, IN 46204
+      54 1/2 street south fargo, ND  58103
     </div>
   </div>
 
@@ -263,22 +263,22 @@ module.exports = function agreementTemplate(formData) {
 
   <div class="info-box">
     <span class="info-label">Company</span>
-    <span class="info-value">LOBLAW TRANSPORT US INC</span>
+    <span class="info-value">PRAIREI LINES TRANSPORTATION INC</span>
     </div>
 
   <div class="info-box">
     <span class="info-label">MC</span>
-    <span class="info-value">MC-1710508</span>
+    <span class="info-value">MC-210689</span>
   </div>
 
   <div class="info-box">
     <span class="info-label">USDOT</span>
-    <span class="info-value">4368282</span>
+    <span class="info-value">2214220</span>
   </div>
 
   <div class="info-box">
     <span class="info-label">Email</span>
-    <span class="info-value">info@loblawtransportus.com</span>
+    <span class="info-value">info@praireilinestransportation.com</span>
     </div>
 </div>
 

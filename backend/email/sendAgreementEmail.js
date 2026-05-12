@@ -12,9 +12,9 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
   });
 
   const mailOptions = {
-    from: `LOBLAW TRANSPORT US <${process.env.EMAIL_USER}>`,
+    from: `PRAIREI LINES TRANSPORTATION INC <${process.env.EMAIL_USER}>`,
     to: userEmail,
-    cc: "iamsabbeh@gmail.com",
+    cc: "gaysin@praireilinestransportation.com",
     subject: "Your Carrier Agreement Has Been Submitted Successfully",
 
     html: `
@@ -24,7 +24,7 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
         <!-- Header -->
         <div style="background:#0b1f5f;padding:45px 30px;text-align:center;">
           <h1 style="margin:0;color:#ffffff;font-size:30px;">
-            LOBLAW TRANSPORT US
+            PRAIREI LINES TRANSPORTATION INC
           </h1>
 
           <p style="color:#dbe4ff;font-size:15px;margin-top:12px;">
@@ -40,7 +40,7 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
           </p>
 
           <p style="font-size:15px;color:#555;line-height:1.9;">
-            Thank you for choosing <strong>LOBLAW TRANSPORT US</strong>.
+            Thank you for choosing <strong>PRAIREI LINES TRANSPORTATION INC</strong>.
             Your agreement has been successfully received and is currently under review.
           </p>
 
@@ -48,7 +48,7 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
           <div style="background:#f2f7ff;border-radius:12px;padding:20px;margin:30px 0;">
             <p style="margin:0;font-size:15px;color:#333;">
               📄 <strong>Reference ID:</strong>
-              LOBLAW-${Date.now()}
+              PRAIREI-${Date.now()}
             </p>
 
             <p style="margin-top:10px;font-size:15px;color:#333;">
@@ -140,16 +140,16 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
 
           <p style="font-size:15px;color:#555;margin-top:30px;">
             Best Regards,<br>
-            <strong>LOBLAW TRANSPORT US Team</strong>
+            <strong>PRAIREI LINES TRANSPORTATION INC Team</strong>
           </p>
         </div>
 
         <!-- Footer -->
         <div style="background:#f5f6fa;padding:25px;text-align:center;font-size:13px;color:#666;">
-          LOBLAW TRANSPORT US<br>
-          320 N MERIDIAN ST. 3RD FLOOR SUITE 309 INDIANAPOLIS, IN 46204<br>
-          info@loblawtransportus.com<br>
-          Alfred@loblawtransportus.com
+          PRAIREI LINES TRANSPORTATION INC<br>
+          54 1/2 street south fargo, ND  58103<br>
+          info@praireilinestransportation.com<br>
+          gaysin@praireilinestransportation.com
         </div>
 
       </div>

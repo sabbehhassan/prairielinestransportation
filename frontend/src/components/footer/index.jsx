@@ -11,11 +11,11 @@ const Footer = () => {
     <footer className="relative bg-[#061425] text-white overflow-hidden">
 
       {/* Background Effects */}
-      <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-[#0B7BEA]/10 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#0B7BEA]/10 rounded-full blur-[120px]"></div>
+      <div className="absolute top-0 left-0 w-87.5 h-87.5 bg-[#0B7BEA]/10 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-0 right-0 w-87.5 h-87.5 bg-[#0B7BEA]/10 rounded-full blur-[120px]"></div>
 
       {/* Top Border */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#0B7BEA] to-transparent"></div>
+      <div className="h-0.5 bg-linear-to-r from-transparent via-[#0B7BEA] to-transparent"></div>
 
       {/* Footer Container */}
       <div className="relative max-w-7xl mx-auto px-6 pt-14 pb-6">
@@ -32,7 +32,7 @@ const Footer = () => {
               className="w-44 mb-4"
             />
 
-            <p className="text-gray-300 text-sm leading-7 max-w-[260px]">
+            <p className="text-gray-300 text-sm leading-7 max-w-65">
                  LOBLAW TRANSPORT US delivers dependable logistics and freight
               services designed to keep shipments moving efficiently, securely,
               and always on schedule.
@@ -45,7 +45,7 @@ const Footer = () => {
 
             <h3 className="text-xl font-semibold mb-8 relative inline-block">
               Quick Links
-              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-[2px] bg-[#0B7BEA] rounded-full"></span>
+              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-0.5 bg-[#0B7BEA] rounded-full"></span>
             </h3>
 
             <ul className="space-y-4 text-gray-300">
@@ -76,7 +76,7 @@ const Footer = () => {
 
             <h3 className="text-xl font-semibold mb-8 relative inline-block">
               Services
-              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-[2px] bg-[#0B7BEA] rounded-full"></span>
+              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-0.5 bg-[#0B7BEA] rounded-full"></span>
             </h3>
 
             <ul className="space-y-4 text-gray-300">
@@ -104,7 +104,7 @@ const Footer = () => {
 
             <h3 className="text-xl font-semibold mb-8 relative inline-block">
               Contact Info
-              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-[2px] bg-[#0B7BEA] rounded-full"></span>
+              <span className="absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 -bottom-2 w-12 h-0.5 bg-[#0B7BEA] rounded-full"></span>
             </h3>
 
             <div className="space-y-6 w-full">
@@ -117,7 +117,7 @@ const Footer = () => {
                 </div>
 
                 <p className="text-gray-300 text-sm leading-7">
-                  320 N MERIDIAN ST. 3RD FLOOR SUITE INDIANAPOLIS, IN 46204
+                  54 1/2 street south fargo, ND  58103
                 </p>
 
               </div>
@@ -130,9 +130,9 @@ const Footer = () => {
                 </div>
 
                 <p className="text-gray-300 text-sm leading-7 break-all">
-                     info@loblawtransportus.com
+                    info@praireilinestransportation.com
                   <br />
-                     Alfred@loblawtransportus.com
+                    gaysin@praireilinestransportation.com
                 </p>
 
               </div>
@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="pt-8 text-center">
 
           <p className="text-sm text-gray-400">
-               © 2018 LOBLAW TRANSPORT US. All Rights Reserved.
+               © 2026 PRAIREI LINES TRANSPORTATION INC. All Rights Reserved.
           </p>
 
         </div>

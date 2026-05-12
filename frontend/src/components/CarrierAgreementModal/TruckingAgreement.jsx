@@ -76,7 +76,7 @@ export default function TruckingAgreement({
 
                 <div>
                   <h3 className="text-xl font-bold text-[#02053D]">
-                    LOBLAW TRANSPORT US
+                    PRAIREI LINES TRANSPORTATION INC
                   </h3>
 
                   <p className="text-sm text-gray-500">
@@ -88,19 +88,19 @@ export default function TruckingAgreement({
               <div className="grid sm:grid-cols-2 gap-4 text-sm sm:text-base text-gray-600">
                 <div className="flex items-start gap-3">
                   <Building2 size={18} className="mt-1 text-[#02053D]" />
-                  <span>320 N MERIDIAN ST. 3RD FLOOR SUITE 309 INDIANAPOLIS, IN 46204</span>
+                  <span>54 1/2 street south fargo, ND  58103</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Globe size={18} className="mt-1 text-[#02053D]" />
                   <span className="text-blue-600">
-                    loblawtransportus-9acv.vercel.app
+                    www.praireilinestransportation.com
                   </span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="mt-1 text-[#02053D]" />
-                  <span>info@loblawtransportus.com</span>
+                  <span>info@praireilinestransportation.com</span>
                 </div>
               </div>
             </div>
