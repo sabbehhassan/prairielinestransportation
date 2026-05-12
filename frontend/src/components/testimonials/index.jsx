@@ -10,7 +10,7 @@ const reviews = [
     name: "John Doe",
     role: "Amazon Partner",
     review:
-      "We rely heavily on Amazon load deliveries, and BNSF Logistics Services has never let us down. Every shipment is handled with precision.",
+      "We rely heavily on Amazon load deliveries, and Prairie Lines Transportation has never let us down. Every shipment is handled with precision.",
   },
   {
     name: "Alessandro Daluz",
@@ -61,22 +61,22 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-[#f4f7fb] py-24 overflow-hidden">
+    <section className="bg-gradient-to-b from-[#EEF3E8] to-[#F8F5EE] py-24 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
 
-          <span className="bg-[#0B7BEA]/10 text-[#0B7BEA] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
+          <span className="bg-[#2E6B3D]/10 text-[#2E6B3D] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide border border-[#2E6B3D]/10">
             Client Feedback
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0B1C39] mt-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F3D2E] mt-6 leading-tight">
             Trusted By Businesses Worldwide
           </h2>
 
-          <p className="text-gray-600 text-base leading-8 mt-6">
+          <p className="text-[#5d6d63] text-base leading-8 mt-6">
             Hear directly from our satisfied clients who trust us for freight,
             transportation, and logistics excellence.
           </p>
@@ -89,33 +89,33 @@ const Testimonials = () => {
           {visibleReviews.map((review, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-[32px] p-8 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              className="group relative bg-white rounded-[32px] p-8 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-[#D4A017]/10"
             >
 
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0B7BEA]/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#2E6B3D]/5 to-[#D4A017]/5 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-[#0B7BEA]/10 text-6xl group-hover:text-[#0B7BEA]/20 transition duration-500">
+              <div className="absolute top-6 right-6 text-[#2E6B3D]/10 text-6xl group-hover:text-[#D4A017]/20 transition duration-500">
                 <FaQuoteLeft />
               </div>
 
               <div className="relative">
 
                 {/* Stars */}
-                <div className="flex gap-1 text-yellow-400 mb-5">
+                <div className="flex gap-1 text-[#D4A017] mb-5">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="text-sm" />
                   ))}
                 </div>
 
                 {/* Review */}
-                <p className="text-gray-700 text-base leading-8">
+                <p className="text-[#4f5f55] text-base leading-8">
                   "{review.review}"
                 </p>
 
                 {/* Divider */}
-                <div className="w-full h-[1px] bg-gray-200 my-8"></div>
+                <div className="w-full h-[1px] bg-[#dfe7dc] my-8"></div>
 
                 {/* User */}
                 <div className="flex items-center justify-between">
@@ -123,16 +123,16 @@ const Testimonials = () => {
                   <div className="flex items-center gap-4">
 
                     {/* Avatar */}
-                    <div className="w-[55px] h-[55px] rounded-full bg-[#0B7BEA] text-white flex items-center justify-center font-bold text-lg">
+                    <div className="w-[55px] h-[55px] rounded-full bg-gradient-to-br from-[#2E6B3D] to-[#0F3D2E] text-white flex items-center justify-center font-bold text-lg shadow-lg">
                       {review.name.charAt(0)}
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-bold text-[#0B1C39]">
+                      <h4 className="text-lg font-bold text-[#0F3D2E]">
                         {review.name}
                       </h4>
 
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-[#6d7a72]">
                         {review.role}
                       </p>
                     </div>
@@ -140,13 +140,16 @@ const Testimonials = () => {
                   </div>
 
                   {/* Arrow */}
-                  <div className="text-[#0B7BEA] text-lg group-hover:translate-x-1 transition duration-300">
+                  <div className="text-[#2E6B3D] text-lg group-hover:text-[#D4A017] group-hover:translate-x-1 transition duration-300">
                     <FaArrowRight />
                   </div>
 
                 </div>
 
               </div>
+
+              {/* Top Accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2E6B3D] to-[#D4A017]"></div>
 
             </div>
           ))}
