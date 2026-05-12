@@ -28,12 +28,12 @@ const Footer = () => {
 
             <img
               src={logo}
-                 alt="LOBLAW TRANSPORT US"
+                 alt="PRAIREI LINES TRANSPORTATION INC"
               className="w-44 mb-4"
             />
 
             <p className="text-gray-300 text-sm leading-7 max-w-65">
-                 LOBLAW TRANSPORT US delivers dependable logistics and freight
+                 PRAIREI LINES TRANSPORTATION INC delivers dependable logistics and freight
               services designed to keep shipments moving efficiently, securely,
               and always on schedule.
             </p>

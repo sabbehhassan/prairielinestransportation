@@ -82,7 +82,7 @@ const About = () => {
           </h2>
 
           <p className="text-gray-700 mt-6 leading-8">
-            LOBLAW TRANSPORT Services connects businesses with dependable freight
+            PRAIREI LINES TRANSPORTATION INC connects businesses with dependable freight
             carriers and supply chain solutions.
           </p>
 

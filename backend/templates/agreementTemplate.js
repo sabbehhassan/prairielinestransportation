@@ -456,7 +456,7 @@ module.exports = function agreementTemplate(formData) {
       <div class="signature-body">
         <div class="signature-col">
           <b>BROKER</b><br/>
-            LOBLAW TRANSPORT US
+            PRAIREI LINES TRANSPORTATION INC
         </div>
         <div class="signature-col">
           <b>CARRIER</b><br/>
