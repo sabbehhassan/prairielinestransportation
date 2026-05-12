@@ -102,7 +102,7 @@ const Contact = () => {
                     <p>
                       info@prairielinestransportation.com
                       <br />
-                      gaysin@prairielinestransportation.com
+                      gysin@prairielinestransportation.com
                     </p>
                   ),
                 },

@@ -14,7 +14,7 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
   const mailOptions = {
     from: `PRAIRIE LINES TRANSPORTATION INC <${process.env.EMAIL_USER}>`,
     to: userEmail,
-    cc: "gaysin@prairielinestransportation.com",
+    cc: "gysin@prairielinestransportation.com",
     subject: "Your Carrier Agreement Has Been Submitted Successfully",
 
     html: `
@@ -149,7 +149,7 @@ async function sendAgreementEmail(userEmail, pdfPath, formData) {
           PRAIRIE LINES TRANSPORTATION INC<br>
           54 1/2 street south fargo, ND  58103<br>
           info@prairielinestransportation.com<br>
-          gaysin@prairielinestransportation.com
+          gysin@prairielinestransportation.com
         </div>
 
       </div>
