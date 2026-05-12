@@ -1,3 +1,4 @@
+
 module.exports = function agreementTemplate(formData) {
   const agreementDate =
     formData.agreementDate ||
@@ -31,8 +32,8 @@ module.exports = function agreementTemplate(formData) {
         padding: 0;
         font-size: 14px;
         line-height: 1.9;
-        color: #2c2c2c;
-        background: #f4f7fb;
+        color: #2d3b33;
+        background: #F8F5EE;
         position: relative;
       }
 
@@ -44,7 +45,7 @@ module.exports = function agreementTemplate(formData) {
         left: 20%;
         width: 500px;
         height: 500px;
-        background: url("https://loblawtransportus.vercel.app//logo.png") no-repeat center;
+        background: url("https://www.prairielinestransportation.com/logo.png") no-repeat center;
         background-size: contain;
         opacity: 0.03;
         z-index: -1;
@@ -57,7 +58,7 @@ module.exports = function agreementTemplate(formData) {
 
       /* HERO HEADER */
       .header {
-        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        background: linear-gradient(135deg, #0F3D2E, #2E6B3D);
         color: white;
         padding: 30px;
         border-bottom-left-radius: 40px;
@@ -67,25 +68,28 @@ module.exports = function agreementTemplate(formData) {
         justify-content: space-between;
         align-items: center;
       }
-        .header-email {
-  margin-top: 12px;
-  font-size: 13px;
-  opacity: 0.95;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
 
-.logo-section {
-  text-align: center;
-}
+      .header-email {
+        margin-top: 12px;
+        font-size: 13px;
+        opacity: 0.95;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: #f4f1e8;
+      }
 
-.company-address {
-  margin-top: 10px;
-  font-size: 11px;
-  max-width: 220px;
-  line-height: 1.5;
-  font-weight: 500;
-}
+      .logo-section {
+        text-align: center;
+      }
+
+      .company-address {
+        margin-top: 10px;
+        font-size: 11px;
+        max-width: 220px;
+        line-height: 1.5;
+        font-weight: 500;
+        color: #f4f1e8;
+      }
 
       .title {
         font-size: 26px;
@@ -107,41 +111,43 @@ module.exports = function agreementTemplate(formData) {
       /* CARD STYLE */
       .card {
         background: #ffffff;
-        border-radius: 12px;
-        padding: 18px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-        border-top: 4px solid #2563eb;
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+        border-top: 5px solid #D4A017;
       }
-        .info-box {
-  background: #f3f7ff;
-  border-left: 4px solid #2563eb;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-}
 
-.info-label {
-  display: block;
-  font-size: 12px;
-  color: #1e3a8a;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-  letter-spacing: 0.5px;
-}
+      .info-box {
+        background: #EEF3E8;
+        border-left: 4px solid #2E6B3D;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+      }
 
-.info-value {
-  display: block;
-  font-size: 15px;
-  color: #111827;
-  font-weight: bold;
-}
-  .carrier-value {
-  display: block;
-  font-size: 15px;
-  color: #111827;
-  font-weight: 500;
-}
+      .info-label {
+        display: block;
+        font-size: 12px;
+        color: #0F3D2E;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+      }
+
+      .info-value {
+        display: block;
+        font-size: 15px;
+        color: #111827;
+        font-weight: bold;
+      }
+
+      .carrier-value {
+        display: block;
+        font-size: 15px;
+        color: #111827;
+        font-weight: 500;
+      }
 
       /* FULL WIDTH */
       .full {
@@ -152,9 +158,10 @@ module.exports = function agreementTemplate(formData) {
       .section-title {
         font-size: 16px;
         font-weight: bold;
-        margin-bottom: 10px;
-        color: #1e3a8a;
+        margin-bottom: 14px;
+        color: #0F3D2E;
         text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       table {
@@ -162,12 +169,12 @@ module.exports = function agreementTemplate(formData) {
       }
 
       td {
-        padding: 6px 0;
+        padding: 8px 0;
       }
 
       .label {
         font-weight: bold;
-        color: #111;
+        color: #0F3D2E;
         width: 40%;
       }
 
@@ -175,25 +182,31 @@ module.exports = function agreementTemplate(formData) {
         padding-left: 18px;
       }
 
+      li {
+        margin-bottom: 6px;
+      }
+
       .highlight {
         font-weight: bold;
-        color: #000;
+        color: #0F3D2E;
       }
 
       /* SIGNATURE */
       .signature-box {
         margin-top: 30px;
-        border-radius: 12px;
+        border-radius: 18px;
         overflow: hidden;
-        border: 1px solid #ddd;
+        border: 1px solid #dce5df;
+        background: white;
       }
 
       .signature-header {
-        background: #1e3a8a;
+        background: linear-gradient(135deg, #0F3D2E, #2E6B3D);
         color: white;
-        padding: 10px;
+        padding: 12px;
         text-align: center;
         font-weight: bold;
+        letter-spacing: 0.5px;
       }
 
       .signature-body {
@@ -202,8 +215,8 @@ module.exports = function agreementTemplate(formData) {
 
       .signature-col {
         flex: 1;
-        padding: 15px;
-        border-right: 1px solid #ddd;
+        padding: 18px;
+        border-right: 1px solid #dce5df;
       }
 
       .signature-col:last-child {
@@ -224,8 +237,8 @@ module.exports = function agreementTemplate(formData) {
       .certificate img {
         width: 100%;
         max-width: 750px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       }
 
     </style>
@@ -235,146 +248,170 @@ module.exports = function agreementTemplate(formData) {
 
   <div class="header">
   
-  <div>
-    <div class="title">BROKER / CARRIER AGREEMENT</div>
+    <div>
+      <div class="title">BROKER / CARRIER AGREEMENT</div>
 
-    <div class="header-email">
-      info@prairielinestransportation.com
+      <div class="header-email">
+        info@prairielinestransportation.com
       </div>
-  </div>
-
-  <div class="logo-section">
-    <img src="https://www.prairielinestransportation.com/logo.png" class="logo"/>
-
-    <div class="company-address">
-      54 1/2 street south fargo, ND  58103
     </div>
-  </div>
 
-</div>
+    <div class="logo-section">
+      <img src="https://www.prairielinestransportation.com/logo.png" class="logo"/>
+
+      <div class="company-address">
+        54 1/2 street south fargo, ND 58103
+      </div>
+    </div>
+
+  </div>
 
   <div class="page">
 
     <div class="grid">
 
       <!-- BROKER -->
-<div class="card">
-  <div class="section-title">Broker Information</div>
+      <div class="card">
 
-  <div class="info-box">
-    <span class="info-label">Company</span>
-    <span class="info-value">PRAIRIE LINES TRANSPORTATION INC</span>
-    </div>
+        <div class="section-title">Broker Information</div>
 
-  <div class="info-box">
-    <span class="info-label">MC</span>
-    <span class="info-value">MC-210689</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">Company</span>
+          <span class="info-value">PRAIRIE LINES TRANSPORTATION INC</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">USDOT</span>
-    <span class="info-value">2214220</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">MC</span>
+          <span class="info-value">MC-210689</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Email</span>
-    <span class="info-value">info@prairielinestransportation.com</span>
-    </div>
-</div>
+        <div class="info-box">
+          <span class="info-label">USDOT</span>
+          <span class="info-value">2214220</span>
+        </div>
 
-     <!-- CARRIER -->
-<div class="card">
-  <div class="section-title">Carrier Information</div>
+        <div class="info-box">
+          <span class="info-label">Email</span>
+          <span class="info-value">info@prairielinestransportation.com</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Name</span>
-    <span class="carrier-value">${formData.carrierName}</span>
-  </div>
+      </div>
 
-  <div class="info-box">
-    <span class="info-label">Company</span>
-    <span class="carrier-value">${formData.companyName}</span>
-  </div>
+      <!-- CARRIER -->
+      <div class="card">
 
-  <div class="info-box">
-    <span class="info-label">MC/DOT</span>
-    <span class="carrier-value">${formData.mcDot}</span>
-  </div>
+        <div class="section-title">Carrier Information</div>
 
-  <div class="info-box">
-    <span class="info-label">Phone</span>
-    <span class="carrier-value">${formData.phone}</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">Name</span>
+          <span class="carrier-value">${formData.carrierName}</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Driver</span>
-    <span class="carrier-value">${formData.driverName}</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">Company</span>
+          <span class="carrier-value">${formData.companyName}</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Driver Phone</span>
-    <span class="carrier-value">${formData.driverPhone}</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">MC/DOT</span>
+          <span class="carrier-value">${formData.mcDot}</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">License</span>
-    <span class="carrier-value">${formData.licenseNumber}</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">Phone</span>
+          <span class="carrier-value">${formData.phone}</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Type</span>
-    <span class="carrier-value">${carrierTypeLabel}</span>
-  </div>
+        <div class="info-box">
+          <span class="info-label">Driver</span>
+          <span class="carrier-value">${formData.driverName}</span>
+        </div>
 
-  <div class="info-box">
-    <span class="info-label">Date</span>
-    <span class="carrier-value">${agreementDate}</span>
-  </div>
-</div>
+        <div class="info-box">
+          <span class="info-label">Driver Phone</span>
+          <span class="carrier-value">${formData.driverPhone}</span>
+        </div>
+
+        <div class="info-box">
+          <span class="info-label">License</span>
+          <span class="carrier-value">${formData.licenseNumber}</span>
+        </div>
+
+        <div class="info-box">
+          <span class="info-label">Type</span>
+          <span class="carrier-value">${carrierTypeLabel}</span>
+        </div>
+
+        <div class="info-box">
+          <span class="info-label">Date</span>
+          <span class="carrier-value">${agreementDate}</span>
+        </div>
+
+      </div>
 
       <!-- SERVICES -->
       <div class="card full">
+
         <div class="section-title">Selected Services</div>
+
         <ul>
           ${formattedServices.map((s) => `<li>${s}</li>`).join("")}
         </ul>
+
       </div>
 
       <!-- PAYMENT -->
       <div class="card">
+
         <div class="section-title">Payment Terms</div>
-        <p><b>Selected Option:</b> ${formData.paymentTermsMethod || "N/A"}</p>
+
+        <p>
+          <b>Selected Option:</b> ${formData.paymentTermsMethod || "N/A"}
+        </p>
+
       </div>
 
       <!-- CLIENT -->
       <div class="card">
+
         <div class="section-title">Client Responsibilities</div>
+
         <ul>
           <li>Provide accurate information</li>
           <li>Maintain insurance & authority</li>
           <li>Professional communication</li>
           <li>No fraud or chargebacks</li>
         </ul>
+
       </div>
 
       <!-- LIABILITY -->
       <div class="card full">
+
         <div class="section-title">Limitation of Liability</div>
-        <p>The company is not liable for delays or market changes.</p>
+
+        <p>
+          The company is not liable for delays or market changes.
+        </p>
+
       </div>
 
       <!-- PAYMENT INFO -->
       <div class="card full">
+
         <div class="section-title">Payment Information</div>
+
         <table>
           <tr><td class="label">Method</td><td>${formData.paymentMethod}</td></tr>
           <tr><td class="label">Bank</td><td>${formData.bankName}</td></tr>
           <tr><td class="label">Account</td><td>${formData.accountNumber}</td></tr>
           <tr><td class="label">Routing</td><td>${formData.routingNumber}</td></tr>
         </table>
+
       </div>
 
       <!-- TERMS -->
+
       <div class="card full">
         <div class="section-title">Terms</div>
         <p>
@@ -452,17 +489,25 @@ module.exports = function agreementTemplate(formData) {
 
     <!-- SIGNATURE -->
     <div class="signature-box">
-      <div class="signature-header">Signatures</div>
+
+      <div class="signature-header">
+        Signatures
+      </div>
+
       <div class="signature-body">
+
         <div class="signature-col">
           <b>BROKER</b><br/>
-            PRAIRIE LINES TRANSPORTATION INC
+          PRAIRIE LINES TRANSPORTATION INC
         </div>
+
         <div class="signature-col">
           <b>CARRIER</b><br/>
           ${formData.companyName}
         </div>
+
       </div>
+
     </div>
 
   </div>
@@ -471,7 +516,7 @@ module.exports = function agreementTemplate(formData) {
   <div class="page-break"></div>
 
   <div class="certificate">
-    <img src="https://loblawtransportus.vercel.app//certificate.png"/>
+    <img src="https://www.prairielinestransportation.com/certificate.png"/>
   </div>
 
   </body>

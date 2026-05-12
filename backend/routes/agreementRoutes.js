@@ -1,73 +1,147 @@
-const express = require("express");
-const router = express.Router();
+const nodemailer = require("nodemailer");
 
-const generateAgreementPDF = require("../pdf/generateAgreementPDF");
-const sendAgreementEmail = require("../email/sendAgreementEmail");
+const sendAgreementEmail = async (
+  userEmail,
+  pdfPath,
+  formData
+) => {
 
-router.post("/submit-agreement", async (req, res) => {
-  try {
-    const body = req.body;
+  // =========================
+  // HOSTINGER SMTP
+  // =========================
+  const transporter = nodemailer.createTransport({
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true,
 
-    const formData = {
-      // Step 1
-      agreementType: body.agreementType,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
-      // Step 2
-      selectedDispatch: body.selectedDispatch,
-      agreementDate: body.agreementDate,
+  // =========================
+  // PDF ATTACHMENT
+  // =========================
+  const attachments = [
+    {
+      filename: "agreement.pdf",
+      path: pdfPath,
+    },
+  ];
 
-      // Step 3
-      carrierName: body.carrierName,
-      companyName: body.companyName,
-      mcDot: body.mcDot,
-      phone: body.phone,
-      carrierType: body.carrierType,
-      selectedServices: body.selectedServices || [],
-      paymentTermsMethod: body.paymentTermsMethod,
+  // =====================================================
+  // STEP 1
+  // SEND MAIL TO USER
+  // =====================================================
+  await transporter.sendMail({
+    from: `"Prairie Lines Transportation" <${process.env.EMAIL_USER}>`,
 
-      // Step 4 / Payment
-      paymentMethod: body.paymentMethod,
-      bankName: body.bankName,
-      accountNumber: body.accountNumber,
-      routingNumber: body.routingNumber,
-      driverName: body.driverName,
-      driverPhone: body.driverPhone,
-      licenseNumber: body.licenseNumber,
+    to: userEmail,
 
-      // Step 5
-      email: body.email,
-      signature: body.signature,
-      printName: body.printName,
+    subject: "Your Agreement PDF",
 
-      // Date fallback
-      date: body.date,
-    };
+    html: `
+      <div style="font-family: Arial, sans-serif; padding:20px;">
 
-    console.log("FINAL ROUTE DATA:", formData);
+        <h2 style="color:#0B7BEA;">
+          Agreement Submitted Successfully
+        </h2>
 
-    const pdfPath = await generateAgreementPDF(formData);
+        <p>
+          Hello ${formData.printName || formData.carrierName},
+        </p>
 
-    await sendAgreementEmail(
-      formData.email,
-      pdfPath,
-      formData
-    );
+        <p>
+          Thank you for submitting your agreement.
+        </p>
 
-    res.status(200).json({
-      success: true,
-      message: "Agreement submitted successfully",
-      pdfPath,
-    });
-  } catch (error) {
-    console.error("Agreement Route Error:", error);
+        <p>
+          Your agreement PDF is attached with this email.
+        </p>
 
-    res.status(500).json({
-      success: false,
-      message: "Server Error",
-      error: error.message, // Add this line
-      stack: error.stack,   // And this line (optional, for debugging)
-    });
-  }
-});
+        <br />
 
-module.exports = router;
+        <p>
+          Regards,<br/>
+          Prairie Lines Transportation
+        </p>
+
+      </div>
+    `,
+
+    attachments,
+  });
+
+  console.log("USER EMAIL SENT");
+
+  // =====================================================
+  // STEP 2
+  // SEND MAIL TO HOSTINGER MAILBOX
+  // =====================================================
+  await transporter.sendMail({
+    from: `"Prairie Lines Website" <${process.env.EMAIL_USER}>`,
+
+    to: process.env.EMAIL_USER,
+
+    replyTo: userEmail,
+
+    subject: `New Agreement Submitted - ${formData.companyName}`,
+
+    html: `
+      <div style="font-family: Arial, sans-serif; padding:20px;">
+
+        <h2 style="color:#0B7BEA;">
+          New Agreement Submitted
+        </h2>
+
+        <table style="width:100%; border-collapse: collapse;">
+
+          <tr>
+            <td style="padding:10px; font-weight:bold;">Carrier Name:</td>
+            <td style="padding:10px;">${formData.carrierName}</td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px; font-weight:bold;">Company Name:</td>
+            <td style="padding:10px;">${formData.companyName}</td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px; font-weight:bold;">Email:</td>
+            <td style="padding:10px;">${formData.email}</td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px; font-weight:bold;">Phone:</td>
+            <td style="padding:10px;">${formData.phone}</td>
+          </tr>
+
+          <tr>
+            <td style="padding:10px; font-weight:bold;">MC/DOT:</td>
+            <td style="padding:10px;">${formData.mcDot}</td>
+          </tr>
+
+        </table>
+
+        <div style="
+          margin-top:20px;
+          padding:20px;
+          background:#f3f4f6;
+          border-radius:10px;
+        ">
+          <p>
+            Agreement PDF attached below.
+          </p>
+        </div>
+
+      </div>
+    `,
+
+    attachments,
+  });
+
+  console.log("HOSTINGER MAILBOX EMAIL SENT");
+};
+
+module.exports = sendAgreementEmail;
