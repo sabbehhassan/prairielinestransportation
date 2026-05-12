@@ -53,12 +53,6 @@ const Services = () => {
             className="w-full h-full object-cover"
           />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-[#0F3D2E]/75"></div>
-
-          {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F3D2E]/90 via-[#0F3D2E]/60 to-transparent"></div>
-
           <div className="absolute inset-0 flex items-center justify-center text-center px-6">
 
             <div>
