@@ -30,12 +30,12 @@ const Navbar = () => {
 
               <div className="flex items-center gap-2 hover:text-[#0B7BEA] transition">
                 <FiMail className="text-[#0B7BEA]" />
-                <span>info@loblawtransportus.com</span>
+                <span>info@praireilinestransportation.com</span>
               </div>
 
               <div className="flex items-center gap-2 hover:text-[#0B7BEA] transition">
                 <FiMail className="text-[#0B7BEA]" />
-                <span>Alfred@loblawtransportus.com</span>
+                <span>Alfred@praireilinestransportation.com</span>
               </div>
 
             </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
               <Link to="/" className="flex items-center">
                 <img
                   src={logo}
-                  alt="LOBLAW TRANSPORT US"
+                  alt="PRAIREI LINES TRANSPORTATION INC"
                   className="w-40 object-contain"
                 />
               </Link>
