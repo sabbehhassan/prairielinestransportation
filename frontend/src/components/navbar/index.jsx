@@ -34,7 +34,7 @@ const Navbar = () => {
 
               <div className="flex items-center gap-2 hover:text-[#D4A017] transition">
                 <FiMail className="text-[#D4A017]" />
-                <span>Alfred@prairielinestransportation.com</span>
+                <span>gysin@prairielinestransportation.com</span>
               </div>
 
             </div>
