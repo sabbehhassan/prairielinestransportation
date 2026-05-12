@@ -133,9 +133,9 @@ const Footer = () => {
                 </div>
 
                 <p className="text-[#d7e3dc] text-sm leading-7 break-all">
-                  info@praireilinestransportation.com
+                  info@prairielinestransportation.com
                   <br />
-                  gaysin@praireilinestransportation.com
+                  gaysin@prairielinestransportation.com
                 </p>
 
               </div>

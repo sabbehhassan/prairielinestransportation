@@ -100,9 +100,9 @@ const Contact = () => {
                   title: "Email",
                   value: (
                     <p>
-                      info@praireilinestransportation.com
+                      info@prairielinestransportation.com
                       <br />
-                      gaysin@praireilinestransportation.com
+                      gaysin@prairielinestransportation.com
                     </p>
                   ),
                 },

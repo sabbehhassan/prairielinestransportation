@@ -29,12 +29,12 @@ const Navbar = () => {
 
               <div className="flex items-center gap-2 hover:text-[#D4A017] transition">
                 <FiMail className="text-[#D4A017]" />
-                <span>info@praireilinestransportation.com</span>
+                <span>info@prairielinestransportation.com</span>
               </div>
 
               <div className="flex items-center gap-2 hover:text-[#D4A017] transition">
                 <FiMail className="text-[#D4A017]" />
-                <span>Alfred@praireilinestransportation.com</span>
+                <span>Alfred@prairielinestransportation.com</span>
               </div>
 
             </div>

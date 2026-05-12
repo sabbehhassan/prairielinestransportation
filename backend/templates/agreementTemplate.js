@@ -239,12 +239,12 @@ module.exports = function agreementTemplate(formData) {
     <div class="title">BROKER / CARRIER AGREEMENT</div>
 
     <div class="header-email">
-      info@praireilinestransportation.com
+      info@prairielinestransportation.com
       </div>
   </div>
 
   <div class="logo-section">
-    <img src="https://www.praireilinestransportation.com/logo.png" class="logo"/>
+    <img src="https://www.prairielinestransportation.com/logo.png" class="logo"/>
 
     <div class="company-address">
       54 1/2 street south fargo, ND  58103
@@ -263,7 +263,7 @@ module.exports = function agreementTemplate(formData) {
 
   <div class="info-box">
     <span class="info-label">Company</span>
-    <span class="info-value">PRAIREI LINES TRANSPORTATION INC</span>
+    <span class="info-value">PRAIRIE LINES TRANSPORTATION INC</span>
     </div>
 
   <div class="info-box">
@@ -278,7 +278,7 @@ module.exports = function agreementTemplate(formData) {
 
   <div class="info-box">
     <span class="info-label">Email</span>
-    <span class="info-value">info@praireilinestransportation.com</span>
+    <span class="info-value">info@prairielinestransportation.com</span>
     </div>
 </div>
 
@@ -456,7 +456,7 @@ module.exports = function agreementTemplate(formData) {
       <div class="signature-body">
         <div class="signature-col">
           <b>BROKER</b><br/>
-            PRAIREI LINES TRANSPORTATION INC
+            PRAIRIE LINES TRANSPORTATION INC
         </div>
         <div class="signature-col">
           <b>CARRIER</b><br/>
