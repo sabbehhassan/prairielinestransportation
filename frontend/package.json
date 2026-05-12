@@ -1,5 +1,5 @@
 {
-  "name": "PRAIREI LINES TRANSPORTATION",
+  "name": "prairei-lines-transportation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "dependencies": {   
     "@tailwindcss/vite": "^4.2.4",
     "axios": "^1.16.0",
     "lucide-react": "^1.14.0",
