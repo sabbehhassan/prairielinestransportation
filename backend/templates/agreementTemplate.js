@@ -45,7 +45,7 @@ module.exports = function agreementTemplate(formData) {
         left: 20%;
         width: 500px;
         height: 500px;
-        background: url("https://www.prairielinestransportation.com/logo.png") no-repeat center;
+        background: url("https://prairielinestransportation.vercel.app/logo.png") no-repeat center;
         background-size: contain;
         opacity: 0.03;
         z-index: -1;
@@ -257,7 +257,7 @@ module.exports = function agreementTemplate(formData) {
     </div>
 
     <div class="logo-section">
-      <img src="https://www.prairielinestransportation.com/logo.png" class="logo"/>
+      <img src="https://prairielinestransportation.vercel.app/logo.png" class="logo"/>
 
       <div class="company-address">
         54 1/2 street south fargo, ND 58103
@@ -516,7 +516,7 @@ module.exports = function agreementTemplate(formData) {
   <div class="page-break"></div>
 
   <div class="certificate">
-    <img src="https://www.prairielinestransportation.com/certificate.png"/>
+    <img src="https://prairielinestransportation.vercel.app/certificate.png"/>
   </div>
 
   </body>
