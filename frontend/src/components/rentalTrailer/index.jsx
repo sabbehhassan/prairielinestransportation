@@ -1,9 +1,18 @@
-import { Truck, ShieldCheck, Clock, DollarSign, ArrowRight } from "lucide-react";
+import {
+  Truck,
+  ShieldCheck,
+  Clock,
+  DollarSign,
+  ArrowRight,
+} from "lucide-react";
+
 import trailerImg from "../../assets/new/6.png";
 
 export default function RentedTrailerProgram({ setOpenAgreement }) {
+
   return (
-    <section className="bg-white py-24">
+    <section className="bg-gradient-to-b from-[#F8F5EE] to-[#EEF3E8] py-24 overflow-hidden">
+
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -11,28 +20,54 @@ export default function RentedTrailerProgram({ setOpenAgreement }) {
           {/* LEFT - IMAGE + FLOATING STATS */}
           <div className="relative">
 
+            {/* Glow */}
+            <div className="absolute -top-10 -left-10 w-52 h-52 bg-[#D4A017]/10 rounded-full blur-3xl"></div>
+
             <img
               src={trailerImg}
               alt="Trailer Rental"
-              className="rounded-3xl shadow-xl w-full h-[500px] object-cover"
+              className="relative rounded-[36px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] w-full h-[520px] object-cover border border-[#D4A017]/10"
             />
 
+            {/* Overlay */}
+            <div className="absolute inset-0 rounded-[36px] bg-gradient-to-t from-[#0F3D2E]/20 to-transparent"></div>
+
             {/* Floating Card 1 */}
-            <div className="absolute -bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3">
-              <Truck className="text-blue-600" />
-              <div>
-                <h4 className="font-bold text-sm">50+ Trailers</h4>
-                <p className="text-xs text-gray-500">Available Fleet</p>
+            <div className="absolute -bottom-7 left-6 bg-white/95 backdrop-blur-xl border border-[#D4A017]/10 p-5 rounded-2xl shadow-xl flex items-center gap-4 hover:-translate-y-1 transition duration-300">
+
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2E6B3D] to-[#0F3D2E] flex items-center justify-center text-white shadow-lg">
+                <Truck size={22} />
               </div>
+
+              <div>
+                <h4 className="font-bold text-[#0F3D2E] text-sm">
+                  50+ Trailers
+                </h4>
+
+                <p className="text-xs text-[#6d7a72] mt-1">
+                  Available Fleet
+                </p>
+              </div>
+
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute -top-6 right-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3">
-              <DollarSign className="text-blue-600" />
-              <div>
-                <h4 className="font-bold text-sm">Affordable</h4>
-                <p className="text-xs text-gray-500">Pricing Plans</p>
+            <div className="absolute -top-7 right-6 bg-white/95 backdrop-blur-xl border border-[#D4A017]/10 p-5 rounded-2xl shadow-xl flex items-center gap-4 hover:-translate-y-1 transition duration-300">
+
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D4A017] to-[#b98708] flex items-center justify-center text-white shadow-lg">
+                <DollarSign size={22} />
               </div>
+
+              <div>
+                <h4 className="font-bold text-[#0F3D2E] text-sm">
+                  Affordable
+                </h4>
+
+                <p className="text-xs text-[#6d7a72] mt-1">
+                  Pricing Plans
+                </p>
+              </div>
+
             </div>
 
           </div>
@@ -40,74 +75,102 @@ export default function RentedTrailerProgram({ setOpenAgreement }) {
           {/* RIGHT - CONTENT */}
           <div>
 
-            <h2 className="text-4xl font-bold text-gray-900 leading-tight">
+            {/* Badge */}
+            <span className="inline-block bg-[#2E6B3D]/10 text-[#2E6B3D] px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide border border-[#2E6B3D]/10 mb-6">
+              Rental Solutions
+            </span>
+
+            {/* Title */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F3D2E] leading-tight">
               Rented Trailer Program
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-8">
-              Access a wide range of high-quality trailers without heavy
-              investment. Our rental program is designed to help carriers
-              scale quickly, reduce costs, and stay flexible.
+            {/* Line */}
+            <div className="w-[120px] h-[4px] bg-gradient-to-r from-[#2E6B3D] to-[#D4A017] rounded-full mt-6"></div>
+
+            {/* Description */}
+            <p className="mt-8 text-[#5d6d63] leading-8 text-base">
+              Access a wide range of premium-quality trailers without heavy
+              investment. Our rental program helps carriers scale operations,
+              reduce upfront costs, and maintain flexibility.
             </p>
 
             {/* Feature List */}
-            <div className="mt-8 space-y-5">
+            <div className="mt-10 space-y-6">
 
-              <div className="flex items-start gap-4">
-                <Truck className="text-blue-600 mt-1" />
-                <div>
-                  <h4 className="font-semibold">Multiple Trailer Options</h4>
-                  <p className="text-sm text-gray-600">
-                    Flatbed, lowbed, and specialized trailers for all cargo types.
-                  </p>
-                </div>
-              </div>
+              {[
+                {
+                  icon: <Truck size={22} />,
+                  title: "Multiple Trailer Options",
+                  desc: "Flatbed, lowbed, and specialized trailers for all cargo types.",
+                },
+                {
+                  icon: <DollarSign size={22} />,
+                  title: "Cost Saving Model",
+                  desc: "Avoid upfront investment and pay only for what you use.",
+                },
+                {
+                  icon: <Clock size={22} />,
+                  title: "Flexible Duration",
+                  desc: "Daily, weekly, or long-term rental options available.",
+                },
+                {
+                  icon: <ShieldCheck size={22} />,
+                  title: "Maintained & Safe",
+                  desc: "Regularly inspected equipment for maximum reliability.",
+                },
+              ].map((item, index) => (
 
-              <div className="flex items-start gap-4">
-                <DollarSign className="text-blue-600 mt-1" />
-                <div>
-                  <h4 className="font-semibold">Cost Saving Model</h4>
-                  <p className="text-sm text-gray-600">
-                    Avoid upfront investment and pay only for what you use.
-                  </p>
-                </div>
-              </div>
+                <div
+                  key={index}
+                  className="group bg-white border border-[#D4A017]/10 rounded-2xl p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 relative overflow-hidden"
+                >
 
-              <div className="flex items-start gap-4">
-                <Clock className="text-blue-600 mt-1" />
-                <div>
-                  <h4 className="font-semibold">Flexible Duration</h4>
-                  <p className="text-sm text-gray-600">
-                    Daily, weekly, or long-term rental options available.
-                  </p>
-                </div>
-              </div>
+                  {/* Glow */}
+                  <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-[#2E6B3D]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-              <div className="flex items-start gap-4">
-                <ShieldCheck className="text-blue-600 mt-1" />
-                <div>
-                  <h4 className="font-semibold">Maintained & Safe</h4>
-                  <p className="text-sm text-gray-600">
-                    Regularly inspected equipment for maximum reliability.
-                  </p>
+                  {/* Icon */}
+                  <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-[#2E6B3D] to-[#0F3D2E] flex items-center justify-center text-white shadow-lg shrink-0 group-hover:rotate-6 transition duration-500">
+                    {item.icon}
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative">
+
+                    <h4 className="font-bold text-[#0F3D2E] text-lg">
+                      {item.title}
+                    </h4>
+
+                    <p className="text-sm text-[#6d7a72] mt-2 leading-7">
+                      {item.desc}
+                    </p>
+
+                  </div>
+
                 </div>
-              </div>
+              ))}
 
             </div>
 
             {/* CTA BUTTON */}
-            <div className="mt-10">
+            <div className="mt-12">
+
               <button
                 onClick={() => setOpenAgreement(true)}
-                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-7 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-200"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#2E6B3D] to-[#0F3D2E] hover:scale-[1.02] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-[0_12px_30px_rgba(46,107,61,0.25)]"
               >
+
                 Apply For Trailer Agreement
+
                 <ArrowRight size={20} />
+
               </button>
 
-              <p className="text-sm text-gray-500 mt-3">
-                Interested in renting a trailer? Fill out the agreement form to get started.
+              <p className="text-sm text-[#6d7a72] mt-4 leading-7">
+                Interested in renting a trailer?
+                Fill out the agreement form to get started.
               </p>
+
             </div>
 
           </div>
@@ -115,6 +178,7 @@ export default function RentedTrailerProgram({ setOpenAgreement }) {
         </div>
 
       </div>
+
     </section>
   );
 }
