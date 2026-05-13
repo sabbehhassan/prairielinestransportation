@@ -4,6 +4,8 @@ const nodemailer = require("nodemailer");
 
 router.post("/", async (req, res) => {
   try {
+    console.log("EMAIL_USER =>", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS =>", process.env.EMAIL_PASS);
     const { name, email, phone, message } = req.body;
 
     // Validation
