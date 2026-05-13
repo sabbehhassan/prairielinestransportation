@@ -250,7 +250,7 @@ const Contact = () => {
         <div className="rounded-[32px] overflow-hidden shadow-xl border border-[#D4A017]/10">
           <iframe
             title="map"
-            src="https://www.google.com/maps?q=320+N+Meridian+St,+Indianapolis,+IN+46204&output=embed"
+            src="https://www.google.com/maps?q=54+1/2+street+south+fargo,+ND+58103&output=embed"
             className="w-full h-[350px] border-0"
             loading="lazy"
           ></iframe>
