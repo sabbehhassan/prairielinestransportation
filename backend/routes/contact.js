@@ -14,25 +14,32 @@ router.post("/", async (req, res) => {
       });
     }
     // Email validation
-    if (typeof email !== 'string' || !email.includes('@')) {
+    if (typeof email !== "string" || !email.includes("@")) {
       return res.status(400).json({
         success: false,
         message: "A valid email is required",
       });
     }
-    if (!process.env.EMAIL_USER || typeof process.env.EMAIL_USER !== 'string' || !process.env.EMAIL_USER.includes('@')) {
+    if (
+      !process.env.EMAIL_USER ||
+      typeof process.env.EMAIL_USER !== "string" ||
+      !process.env.EMAIL_USER.includes("@")
+    ) {
       return res.status(500).json({
         success: false,
-        message: "Admin recipient email (EMAIL_USER) is missing or invalid in environment variables.",
+        message:
+          "Admin recipient email (EMAIL_USER) is missing or invalid in environment variables.",
       });
     }
+
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
 
     // Hostinger SMTP Transporter
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com",
       port: 465,
       secure: true,
-
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -41,12 +48,9 @@ router.post("/", async (req, res) => {
 
     // Mail Template
     const mailOptions = {
-      from: `"Prairie Lines Website" <${process.env.EMAIL_USER}>`,
-
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-
       replyTo: email,
-
       subject: `New Contact Form Message From ${name}`,
 
       html: `
@@ -99,9 +103,7 @@ router.post("/", async (req, res) => {
       success: true,
       message: "Message sent successfully",
     });
-
   } catch (error) {
-
     console.log(error);
 
     return res.status(500).json({
