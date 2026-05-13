@@ -3,8 +3,12 @@
 const nodemailer = require("nodemailer");
 
 async function sendAgreementEmail(userEmail, pdfPath, formData) {
+
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true,
+
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
