@@ -112,16 +112,22 @@ router.post("/", async (req, res) => {
       message: "Message sent successfully",
     });
 
-  } catch (error) {
+  }  catch (error) {
 
-    console.log("CONTACT ERROR =>", error);
+  console.error("FULL ERROR =>", error);
 
-    return res.status(500).json({
-      success: false,
-      message: error.message || "Failed to send message",
-    });
+  console.error("ERROR MESSAGE =>", error.message);
 
-  }
+  console.error("ERROR RESPONSE =>", error.response);
+
+  return res.status(500).json({
+    success: false,
+    message: error.message || "Failed to send message",
+  });
+
+}
+
+  
 });
 
 module.exports = router;
