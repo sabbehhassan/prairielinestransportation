@@ -63,7 +63,7 @@ export default function FinalSubmissionStep({
     try {
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/submit-agreement`,
+        `${import.meta.env.VITE_API_URL}/api/agreement/submit-agreement`,
         {
           method: "POST",
           headers: {
