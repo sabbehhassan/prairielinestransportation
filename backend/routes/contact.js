@@ -4,8 +4,15 @@ const nodemailer = require("nodemailer");
 
 router.post("/", async (req, res) => {
   try {
+
+    console.log("BODY =>", req.body);
+
     console.log("EMAIL_USER =>", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS =>", process.env.EMAIL_PASS);
+    console.log(
+      "EMAIL_PASS =>",
+      process.env.EMAIL_PASS ? "Loaded" : "Missing"
+    );
+
     const { name, email, phone, message } = req.body;
 
     // Validation
@@ -15,29 +22,27 @@ router.post("/", async (req, res) => {
         message: "All fields are required",
       });
     }
+
     // Email validation
     if (typeof email !== "string" || !email.includes("@")) {
       return res.status(400).json({
         success: false,
-        message: "A valid email is required",
+        message: "Valid email required",
       });
     }
+
+    // ENV validation
     if (
       !process.env.EMAIL_USER ||
-      typeof process.env.EMAIL_USER !== "string" ||
-      !process.env.EMAIL_USER.includes("@")
+      !process.env.EMAIL_PASS
     ) {
       return res.status(500).json({
         success: false,
-        message:
-          "Admin recipient email (EMAIL_USER) is missing or invalid in environment variables.",
+        message: "Email configuration missing",
       });
     }
 
-    console.log("EMAIL_USER:", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
-
-    // Hostinger SMTP Transporter
+    // Create transporter
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com",
       port: 465,
@@ -48,11 +53,17 @@ router.post("/", async (req, res) => {
       },
     });
 
-    // Mail Template
+    // Verify SMTP connection
+    await transporter.verify();
+
+    // Mail options
     const mailOptions = {
       from: process.env.EMAIL_USER,
+
       to: process.env.EMAIL_USER,
+
       replyTo: email,
+
       subject: `New Contact Form Message From ${name}`,
 
       html: `
@@ -62,24 +73,17 @@ router.post("/", async (req, res) => {
             New Contact Form Submission
           </h2>
 
-          <table style="width:100%; border-collapse: collapse;">
+          <p>
+            <strong>Name:</strong> ${name}
+          </p>
 
-            <tr>
-              <td style="padding:10px; font-weight:bold;">Name:</td>
-              <td style="padding:10px;">${name}</td>
-            </tr>
+          <p>
+            <strong>Email:</strong> ${email}
+          </p>
 
-            <tr>
-              <td style="padding:10px; font-weight:bold;">Email:</td>
-              <td style="padding:10px;">${email}</td>
-            </tr>
-
-            <tr>
-              <td style="padding:10px; font-weight:bold;">Phone:</td>
-              <td style="padding:10px;">${phone}</td>
-            </tr>
-
-          </table>
+          <p>
+            <strong>Phone:</strong> ${phone}
+          </p>
 
           <div style="
             margin-top:20px;
@@ -98,20 +102,25 @@ router.post("/", async (req, res) => {
       `,
     };
 
-    // Send Mail
-    await transporter.sendMail(mailOptions);
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log("MAIL SENT =>", info.messageId);
 
     return res.status(200).json({
       success: true,
       message: "Message sent successfully",
     });
+
   } catch (error) {
-    console.log(error);
+
+    console.log("CONTACT ERROR =>", error);
 
     return res.status(500).json({
       success: false,
-      message: "Failed to send message",
+      message: error.message || "Failed to send message",
     });
+
   }
 });
 
