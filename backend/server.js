@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use("/api", agreementRoutes);
+app.use("/api/agreement", agreementRoutes);
 
 app.use("/api/contact", contactRoutes);
 
